@@ -298,6 +298,11 @@ nav a.simple-link:hover::after {
 }
 
 /* Listas */
+.table-responsive {
+  overflow-x: auto;
+  width: 100%;
+}
+
 /* Estilos comunes para listas ordenadas y no ordenadas */
 ul, ol {
     padding-left: 20px; /* Sangría izquierda */
