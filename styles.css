@@ -401,6 +401,10 @@ form {
     border-radius: var(--border-radius); /* Esquinas redondeadas */
     box-shadow: var(--box-shadow); /* Sombra sutil */
 }
+.table-responsive {
+  overflow-x: auto;
+  width: 100%;
+}
 
 /* Conjunto de campos relacionados */
 fieldset {
