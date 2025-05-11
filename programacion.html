@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación | Portfolio de Hugo Rincón</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <h1 class="fade-in">EJERCICIOS DE PROGRAMACIÓN</h1>
+            <p class="fade-in delay-1">Aquí iré subiendo los apuntes y ejercicios que realice a lo largo del curso.</p>
+            <nav>
+                <ul>
+                    <li><a href="Index.html" class="fade-in delay-1">Inicio</a></li>
+                    <li>
+                        <a href="programacion.html" class="fade-in delay-2">Programación</a>
+                        <ul>
+                            <li><a href="#HolaMundo">Hola Mundo</a></li>
+                            <li><a href="#OperadoresJava">Operadores Java</a></li>
+                            <li><a href="#EstructurasControl">Estructuras de Control</a></li>
+                            <li><a href="#Arrays">Arrays</a></li>
+                            <li><a href="#POO">POO Módulo 1</a></li>
+                            <li><a href="#POO2">POO Módulo 2</a></li>
+                            <li><a href="#Ficheros">Ficheros</a></li>
+                            <li><a href="#BBDD">Bases de Datos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Quien_Soy.html" class="fade-in delay-3">Quién Soy</a></li>
+                    <li><a href="contacto.html" class="fade-in delay-4">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ÍNDICE -->
+    <div class="section fade-in delay-2">
+        <h2>ÍNDICE DE CONTENIDOS</h2>
+        <div class="card">
+            <ul>
+                <li><strong>MÓDULO 1: FUNDAMENTOS DE JAVA</strong>
+                    <ul>
+                        <li><a href="#HolaMundo">Hola Mundo - Introducción a Java</a></li>
+                        <li><a href="#OperadoresJava">Operadores en Java</a></li>
+                        <li><a href="#EstructurasControl">Estructuras de Control</a></li>
+                        <li><a href="#Arrays">Arrays y Colecciones</a></li>
+                    </ul>
+                </li>
+                <li><strong>MÓDULO 2: PROGRAMACIÓN ORIENTADA A OBJETOS</strong>
+                    <ul>
+                        <li><a href="#POO">Conceptos Básicos de POO</a></li>
+                        <li><a href="#POO2">POO Avanzada</a></li>
+                    </ul>
+                </li>
+                <li><strong>MÓDULO 3: JAVA AVANZADO</strong>
+                    <ul>
+                        <li><a href="#Ficheros">Manejo de Ficheros</a></li>
+                        <li><a href="#Serializacion">Serialización de Objetos</a></li>
+                        <li><a href="#BBDD">Conexión a Bases de Datos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- PROGRESIÓN DEL CURSO -->
+    <div class="section fade-in delay-3">
+        <h2>Progresión del Curso</h2>
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 90%;"></div>
+        </div>
+        <p style="text-align: center; margin-top: 10px;">
+            <span class="badge">90% Completado</span>
+            <span class="highlight">Módulo 3: Java Avanzado - Ficheros y Bases de Datos</span>
+        </p>
+    </div>
+
+    <!-- HOLA MUNDO -->
+    <div class="section fade-in delay-4" id="HolaMundo">
+        <h2>HOLA MUNDO</h2>
+        <p>Este es un ejercicio básico donde se imprime la frase <strong>"Hola Mundo"</strong> usando la instrucción <strong>System.out.println();</strong>. Es un ejercicio de iniciación muy común en la programación y suele ser el primer programa que se escribe al aprender un nuevo lenguaje.</p>
+        
+        <div class="card">
+            <h3>Código fuente</h3>
+            <pre style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto;">
+public class HolaMundo {
+    public static void main(String[] args) {
+        System.out.println("Hola Mundo");
+    }
+}</pre>
+        </div>
+        
+        <div class="img-container">
+            <img src="Hola Mundo.png" alt="Hola Mundo" class="img-content">
+        </div>
+        
+        <div class="card">
+            <h3>Explicación del código</h3>
+            <ul>
+                <li><span class="highlight">public class HolaMundo</span>: Define una clase pública llamada HolaMundo</li>
+                <li><span class="highlight">public static void main(String[] args)</span>: Método principal que se ejecuta al iniciar el programa</li>
+                <li><span class="highlight">System.out.println("Hola Mundo")</span>: Imprime el texto "Hola Mundo" en la consola</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- OPERADORES DE JAVA -->
+    <div class="section fade-in" id="OperadoresJava">
+        <h2>OPERADORES DE JAVA</h2>
+        <p>En Java, los operadores permiten realizar diversas operaciones sobre valores y variables. Se dividen en aritméticos, lógicos, relacionales, etc. Estos operadores son fundamentales para realizar cálculos y tomar decisiones en nuestros programas.</p>
+        
+        <table>
+            <tr>
+                <th colspan="7">OPERADORES EN JAVA</th>
+            </tr>
+            <tr>
+                <th>Aritméticos</th>
+                <th>Relacionales</th>
+                <th>Lógicos</th>
+                <th>Unitarios</th>
+                <th>A Nivel de Bits</th>
+                <th>Asignación</th>
+                <th>Condicional</th>
+            </tr>
+            <tr>
+                <td>+<br>-<br>*<br>/<br>%</td>
+                <td>< <br> <= <br> > <br> >= <br> != <br> ==</td>
+                <td>&&<br>||<br>!</td>
+                <td>+<br>-<br>++<br>--<br>~<br>!</td>
+                <td>&<br>|<br>^<br><< <br>> <br>>> </td>
+                <td>=<br>+=<br>-=<br>*=<br>/=<br>%=<br><<=<br>>>=<br>>>>=<br>&=</td>
+                <td>?:</td>
+            </tr>
+        </table>
+
+        <div class="card">
+            <h3>Ejercicio de operadores de Java</h3>
+            <p>Este ejercicio consiste en ordenar 3 números de mayor a menor. El objetivo es encontrar la mayor cantidad de combinaciones posibles para ordenar los números utilizando operadores de comparación.</p>
+            
+            <pre style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; margin-top: 15px;">
+import java.util.Scanner;
+
+public class OrdenarNumeros {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Introduce el primer número:");
+        int a = sc.nextInt();
+        
+        System.out.println("Introduce el segundo número:");
+        int b = sc.nextInt();
+        
+        System.out.println("Introduce el tercer número:");
+        int c = sc.nextInt();
+        
+        // Ordenar los números
+        if (a >= b && a >= c) {
+            if (b >= c) {
+                System.out.println("Orden: " + a + ", " + b + ", " + c);
+            } else {
+                System.out.println("Orden: " + a + ", " + c + ", " + b);
+            }
+        } else if (b >= a && b >= c) {
+            if (a >= c) {
+                System.out.println("Orden: " + b + ", " + a + ", " + c);
+            } else {
+                System.out.println("Orden: " + b + ", " + c + ", " + a);
+            }
+        } else {
+            if (a >= b) {
+                System.out.println("Orden: " + c + ", " + a + ", " + b);
+            } else {
+                System.out.println("Orden: " + c + ", " + b + ", " + a);
+            }
+        }
+        
+        sc.close();
+    }
+}</pre>
+        </div>
+        
+        <div class="img-container">
+            <img src="ordenar 3 numeros .jpeg" alt="Ejercicio Ordenar 3 Números" class="img-content">
+        </div>
+        </div>
+    </div>
+
+    <!-- ESTRUCTURAS DE CONTROL -->
+    <div class="section fade-in" id="EstructurasControl">
+        <h2>ESTRUCTURAS DE CONTROL</h2>
+        <p>Las estructuras de control en Java nos permiten dirigir el flujo de ejecución según ciertas condiciones. Son fundamentales para crear programas dinámicos que puedan tomar decisiones y repetir acciones. Se dividen en:</p>
+        
+        <div class="card">
+            <ol>
+                <li><span class="highlight">Estructura Secuencial</span> - Ejecución línea a línea</li>
+                <li><span class="highlight">Estructura Condicional</span> - if, else, switch</li>
+                <li><span class="highlight">Estructura Repetitiva</span> - for, while, do-while</li>
+                <li><span class="highlight">Estructura de Salto</span> - break, continue</li>
+            </ol>
+        </div>
+
+        <table>
+            <tr>
+                <th colspan="4">ESTRUCTURAS DE CONTROL</th>
+            </tr>
+            <tr>
+                <th>Estructura Secuencial</th>
+                <th>Estructura Condicional</th>
+                <th>Estructura Repetitiva</th>
+                <th>Instrucciones de Salto</th>
+            </tr>
+            <tr>
+                <td>Secuencial</td>
+                <td>If - Simple<br>If - Else<br>Switch</td>
+                <td>While<br>Do-While<br>For</td>
+                <td>Break<br>Continue</td>
+            </tr>
+        </table>
+
+        <h3>Ejercicios de estructuras de control</h3>
+        <p>A continuación se presentan los ejercicios que realizaré en clase, en orden creciente de dificultad.</p>
+
+        <div class="card">
+            <ol>
+                <li>
+                    <h4>Ejercicio con IF - SIMPLE</h4>
+                    <p>Verificar si un número es positivo y mostrar un mensaje.</p>
+                    <pre style="background-color: #f5f5f5; padding: 10px; border-radius: 5px; overflow-x: auto; margin-top: 10px;">
+if (numero > 0) {
+    System.out.println("El número es positivo");
+}</pre>
+                </li>
+                <li>
+                    <h4>Ejercicio con IF - ELSE</h4>
+                    <p>Determinar si un número es par o impar.</p>
+                    <pre style="background-color: #f5f5f5; padding: 10px; border-radius: 5px; overflow-x: auto; margin-top: 10px;">
+if (numero % 2 == 0) {
+    System.out.println("El número es par");
+} else {
+    System.out.println("El número es impar");
+}</pre>
+                </li>
+                <li>
+                    <h4>Ejercicio con IF - ANIDADOS</h4>
+                    <p>Clasificar una nota según su valor.</p>
+                    <pre style="background-color: #f5f5f5; padding: 10px; border-radius: 5px; overflow-x: auto; margin-top: 10px;">
+import java.util.Scanner;
+
+public class ClasificarNota {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Introduce la nota (0-10):");
+        double nota = sc.nextDouble();
+        
+        if (nota < 0 || nota > 10) {
+            System.out.println("Nota no válida");
+        } else if (nota < 5) {
+            System.out.println("Suspenso");
+        } else if (nota < 7) {
+            System.out.println("Aprobado");
+        } else if (nota < 9) {
+            System.out.println("Notable");
+        } else {
+            System.out.println("Sobresaliente");
+        }
+        
+        sc.close();
+    }
+}</pre>
+                    <div class="card" style="margin-top: 15px;">
+                        <h5>Explicación:</h5>
+                        <p>Este ejercicio utiliza múltiples condiciones anidadas para clasificar una nota numérica en diferentes categorías: suspenso, aprobado, notable o sobresaliente. También verifica que la nota esté dentro del rango válido (0-10).</p>
+                    </div>
+                </li>
+                <li>
+                    <h4>Ejercicio con SWITCH</h4>
+                    <p>Mostrar el nombre del día de la semana según un número.</p>
+                    <pre style="background-color: #f5f5f5; padding: 10px; border-radius: 5px; overflow-x: auto; margin-top: 10px;">
+import java.util.Scanner;
+
+public class DiaSemana {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Introduce un número del 1 al 7:");
+        int dia = sc.nextInt();
+        
+        switch (dia) {
+            case 1:
+                System.out.println("Lunes");
+                break;
+            case 2:
+                System.out.println("Martes");
+                break;
+            case 3:
+                System.out.println("Miércoles");
+                break;
+            case 4:
+                System.out.println("Jueves");
+                break;
+            case 5:
+                System.out.println("Viernes");
+                break;
+            case 6:
+                System.out.println("Sábado");
+                break;
+            case 7:
+                System.out.println("Domingo");
+                break;
+            default:
+                System.out.println("Número no válido");
+        }
+        
+        sc.close();
+    }
+}</pre>
+                    <div class="card" style="margin-top: 15px;">
+                        <h5>Explicación:</h5>
+                        <p>Este ejercicio utiliza la estructura switch para mostrar el nombre del día de la semana correspondiente a un número del 1 al 7. La cláusula default se ejecuta si el número está fuera de ese rango.</p>
+                    </div>
+                </li>
+                <li>
+                    <h4>Ejercicio con WHILE</h4>
+                    <p>Sumar los números del 1 al 10.</p>
+                    <pre style="background-color: #f5f5f5; padding: 10px; border-radius: 5px; overflow-x: auto; margin-top: 10px;">
+public class SumaNumeros {
+    public static void main(String[] args) {
+        int i = 1;
+        int suma = 0;
+        
+        while (i <= 10) {
+            suma += i;
+            i++;
+        }
+        
+        System.out.println("La suma de los números del 1 al 10 es: " + suma);
+    }
+}</pre>
+                    <div class="card" style="margin-top: 15px;">
+                        <h5>Explicación:</h5>
+                        <p>Este ejercicio utiliza un bucle while para sumar los números del 1 al 10. La variable i se incrementa en cada iteración y se va acumulando su valor en la variable suma. El resultado final es 55.</p>
+                    </div>
+                </li>
+                <li>
+                    <h4>Ejercicio con DO - WHILE</h4>
+                    <p>Pedir números hasta que se introduzca un negativo.</p>
+                    <pre style="background-color: #f5f5f5; padding: 10px; border-radius: 5px; overflow-x: auto; margin-top: 10px;">
+import java.util.Scanner;
+
+public class PedirNumeros {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int numero;
+        int contador = 0;
+        
+        do {
+            System.out.println("Introduce un número (negativo para terminar):");
+            numero = sc.nextInt();
+            
+            if (numero >= 0) {
+                contador++;
+            }
+        } while (numero >= 0);
+        
+        System.out.println("Has introducido " + contador + " números positivos o cero.");
+        sc.close();
+    }
+}</pre>
+                    <div class="card" style="margin-top: 15px;">
+                        <h5>Explicación:</h5>
+                        <p>Este ejercicio utiliza un bucle do-while para pedir números al usuario hasta que introduzca uno negativo. La diferencia con el bucle while es que el do-while siempre ejecuta el bloque de código al menos una vez, ya que la condición se evalúa al final.</p>
+                    </div>
+                </li>
+                <li>
+                    <h4>Ejercicio con FOR</h4>
+                    <p>Mostrar la tabla de multiplicar de un número.</p>
+                    <pre style="background-color: #f5f5f5; padding: 10px; border-radius: 5px; overflow-x: auto; margin-top: 10px;">
+import java.util.Scanner;
+
+public class TablaMultiplicar {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Introduce un número para ver su tabla de multiplicar:");
+        int numero = sc.nextInt();
+        
+        System.out.println("Tabla de multiplicar del " + numero + ":");
+        
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(numero + " x " + i + " = " + (numero * i));
+        }
+        
+        sc.close();
+    }
+}</pre>
+                    <div class="card" style="margin-top: 15px;">
+                        <h5>Explicación:</h5>
+                        <p>Este ejercicio utiliza un bucle for para mostrar la tabla de multiplicar de un número introducido por el usuario. El bucle for es ideal cuando sabemos exactamente cuántas iteraciones queremos realizar (en este caso, 10).</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+    
+    <!-- ARRAYS Y COLECCIONES -->
+    <div class="section fade-in" id="Arrays">
+        <h2>ARRAYS Y COLECCIONES</h2>
+        <p>Los arrays y colecciones en Java nos permiten almacenar múltiples valores en una sola variable. Son estructuras de datos fundamentales para cualquier programa que necesite manejar conjuntos de información.</p>
+        
+        <div class="card">
+            <h3>Tipos de estructuras de datos en Java</h3>
+            <ul>
+                <li><span class="highlight">Arrays</span> - Estructuras de tamaño fijo que almacenan elementos del mismo tipo</li>
+                <li><span class="highlight">ArrayList</span> - Implementación de lista dinámica que puede crecer o reducirse</li>
+                <li><span class="highlight">HashMap</span> - Estructura de datos que almacena pares clave-valor</li>
+                <li><span class="highlight">Set</span> - Colección que no permite elementos duplicados</li>
+            </ul>
+        </div>
+
+        <h3>Ejercicios con Arrays</h3>
+        
+        <div class="card">
+            <h4>Ejercicio 1: Crear y recorrer un array</h4>
+            <p>Este ejercicio muestra cómo crear un array de enteros y recorrerlo para calcular su suma y promedio.</p>
+            <pre style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; margin-top: 15px;">
+public class EjemploArray {
+    public static void main(String[] args) {
+        // Declaración e inicialización de un array
+        int[] numeros = {5, 10, 15, 20, 25};
+        
+        // Variables para la suma y el promedio
+        int suma = 0;
+        double promedio;
+        
+        // Recorrer el array y calcular la suma
+        for (int i = 0; i < numeros.length; i++) {
+            suma += numeros[i];
+            System.out.println("Elemento " + i + ": " + numeros[i]);
+        }
+        
+        // Calcular el promedio
+        promedio = (double) suma / numeros.length;
+        
+        // Mostrar resultados
+        System.out.println("La suma de los elementos es: " + suma);
+        System.out.println("El promedio de los elementos es: " + promedio);
+    }
+}</pre>
+            <div style="margin-top: 15px;">
+                <h5>Explicación:</h5>
+                <p>Este ejercicio muestra cómo declarar un array de enteros, recorrerlo usando un bucle for, y realizar operaciones con sus elementos. El array tiene un tamaño fijo (5 elementos) y se accede a cada elemento mediante su índice.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h4>Ejercicio 2: Array bidimensional (matriz)</h4>
+            <p>Este ejercicio muestra cómo trabajar con arrays bidimensionales para representar una matriz.</p>
+            <pre style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; margin-top: 15px;">
+public class MatrizEjemplo {
+    public static void main(String[] args) {
+        // Declarar e inicializar una matriz 3x3
+        int[][] matriz = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+        
+        // Imprimir la matriz
+        System.out.println("Matriz 3x3:");
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println(); // Nueva línea al final de cada fila
+        }
+        
+        // Calcular la suma de la diagonal principal
+        int sumaDiagonal = 0;
+        for (int i = 0; i < matriz.length; i++) {
+            sumaDiagonal += matriz[i][i];
+        }
+        
+        System.out.println("La suma de la diagonal principal es: " + sumaDiagonal);
+    }
+}</pre>
+            <div style="margin-top: 15px;">
+                <h5>Explicación:</h5>
+                <p>Este ejercicio muestra cómo trabajar con arrays bidimensionales (matrices). Se crea una matriz 3x3, se recorre usando bucles for anidados para mostrar sus elementos, y se calcula la suma de la diagonal principal (elementos donde i=j).</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h4>Ejercicio 3: ArrayList</h4>
+            <p>Este ejercicio muestra cómo usar ArrayList, una implementación de lista dinámica en Java.</p>
+            <pre style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; margin-top: 15px;">
+import java.util.ArrayList;
+
+public class EjemploArrayList {
+    public static void main(String[] args) {
+        // Crear un ArrayList de Strings
+        ArrayList<String> nombres = new ArrayList<>();
+        
+        // Añadir elementos
+        nombres.add("Ana");
+        nombres.add("Juan");
+        nombres.add("María");
+        nombres.add("Pedro");
+        
+        // Mostrar el ArrayList
+        System.out.println("Lista de nombres: " + nombres);
+        
+        // Acceder a un elemento específico
+        System.out.println("El segundo nombre es: " + nombres.get(1));
+        
+        // Modificar un elemento
+        nombres.set(2, "Lucía");
+        System.out.println("Lista después de modificar: " + nombres);
+        
+        // Eliminar un elemento
+        nombres.remove(0);
+        System.out.println("Lista después de eliminar: " + nombres);
+        
+        // Recorrer el ArrayList con un bucle for-each
+        System.out.println("Nombres en la lista:");
+        for (String nombre : nombres) {
+            System.out.println("- " + nombre);
+        }
+        
+        // Tamaño del ArrayList
+        System.out.println("La lista contiene " + nombres.size() + " nombres.");
+    }
+}</pre>
+            <div style="margin-top: 15px;">
+                <h5>Explicación:</h5>
+                <p>Este ejercicio muestra cómo usar ArrayList, una colección dinámica que puede crecer o reducirse según sea necesario. Se muestran operaciones comunes como añadir, acceder, modificar y eliminar elementos, así como recorrer la lista con un bucle for-each.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- PROGRAMACIÓN ORIENTADA A OBJETOS -->
+    <div class="section fade-in" id="POO">
+        <h2>PROGRAMACIÓN ORIENTADA A OBJETOS (MÓDULO 1)</h2>
+        <p>La Programación Orientada a Objetos (POO) es un paradigma de programación que utiliza "objetos" para modelar entidades del mundo real. Java es un lenguaje fundamentalmente orientado a objetos.</p>
+        
+        <div class="card">
+            <h3>Conceptos fundamentales de POO</h3>
+            <ul>
+                <li><span class="highlight">Clase</span> - Plantilla para crear objetos, define atributos y métodos</li>
+                <li><span class="highlight">Objeto</span> - Instancia de una clase</li>
+                <li><span class="highlight">Encapsulamiento</span> - Ocultar los detalles internos de implementación</li>
+                <li><span class="highlight">Herencia</span> - Mecanismo para crear clases a partir de otras existentes</li>
+                <li><span class="highlight">Polimorfismo</span> - Capacidad de un objeto para tomar muchas formas</li>
+            </ul>
+        </div>
+
+        <h3>Ejercicios de POO</h3>
+        
+        <div class="card">
+            <h4>Ejercicio 1: Crear una clase y objetos</h4>
+            <p>Este ejercicio muestra cómo crear una clase simple y objetos a partir de ella.</p>
+            <pre style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; margin-top: 15px;">
+// Definición de la clase Persona
+class Persona {
+    // Atributos
+    private String nombre;
+    private int edad;
+    
+    // Constructor
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+    
+    // Métodos
+    public void saludar() {
+        System.out.println("Hola, me llamo " + nombre + " y tengo " + edad + " años.");
+    }
+    
+    // Getters y setters
+    public String getNombre() {
+        return nombre;
+    }
+    
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    public int getEdad() {
+        return edad;
+    }
+    
+    public void setEdad(int edad) {
+        if (edad >= 0) {
+            this.edad = edad;
+        }
+    }
+}
+
+// Clase principal para probar
+public class EjemploClase {
+    public static void main(String[] args) {
+        // Crear objetos de la clase Persona
+        Persona persona1 = new Persona("Carlos", 25);
+        Persona persona2 = new Persona("Laura", 30);
+        
+        // Llamar a métodos de los objetos
+        persona1.saludar();
+        persona2.saludar();
+        
+        // Modificar atributos usando setters
+        persona1.setEdad(26);
+        System.out.println(persona1.getNombre() + " ahora tiene " + persona1.getEdad() + " años.");
+    }
+}</pre>
+            <div style="margin-top: 15px;">
+                <h5>Explicación:</h5>
+                <p>Este ejercicio muestra cómo definir una clase con atributos privados, un constructor, métodos y getters/setters para encapsular los datos. Luego se crean objetos de esa clase y se interactúa con ellos llamando a sus métodos.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h4>Ejercicio 2: Herencia</h4>
+            <p>Este ejercicio muestra cómo implementar la herencia en Java.</p>
+            <pre style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; margin-top: 15px;">
+// Clase base
+class Animal {
+    protected String nombre;
+    protected int edad;
+    
+    public Animal(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+    
+    public void comer() {
+        System.out.println(nombre + " está comiendo.");
+    }
+    
+    public void dormir() {
+        System.out.println(nombre + " está durmiendo.");
+    }
+}
+
+// Clase derivada
+class Perro extends Animal {
+    private String raza;
+    
+    public Perro(String nombre, int edad, String raza) {
+        super(nombre, edad); // Llamada al constructor de la clase base
+        this.raza = raza;
+    }
+    
+    public void ladrar() {
+        System.out.println(nombre + " está ladrando: ¡Guau, guau!");
+    }
+    
+    // Sobrescribir un método de la clase base
+    @Override
+    public void comer() {
+        System.out.println(nombre + " está comiendo croquetas para perros.");
+    }
+    
+    public void mostrarInfo() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad + " años");
+        System.out.println("Raza: " + raza);
+    }
+}
+
+// Clase principal para probar
+public class EjemploHerencia {
+    public static void main(String[] args) {
+        // Crear un objeto de la clase derivada
+        Perro miPerro = new Perro("Bobby", 3, "Labrador");
+        
+        // Llamar a métodos heredados
+        miPerro.comer();  // Método sobrescrito
+        miPerro.dormir(); // Método heredado sin cambios
+        
+        // Llamar a método propio de la clase derivada
+        miPerro.ladrar();
+        
+        // Mostrar información
+        miPerro.mostrarInfo();
+    }
+}</pre>
+            <div style="margin-top: 15px;">
+                <h5>Explicación:</h5>
+                <p>Este ejercicio muestra cómo implementar la herencia en Java. Se crea una clase base Animal y una clase derivada Perro que hereda de Animal. La clase Perro añade nuevos atributos y métodos, y también sobrescribe el método comer() de la clase base.</p>
+            </div>
+    </div>
+    
+    <!-- PROGRAMACIÓN ORIENTADA A OBJETOS MÓDULO 2 -->
+    <div class="section fade-in" id="POO2">
+        <h2>PROGRAMACIÓN ORIENTADA A OBJETOS (MÓDULO 2)</h2>
+        <p>En este módulo avanzado de Programación Orientada a Objetos, exploraremos conceptos más complejos que nos permitirán crear aplicaciones más robustas y escalables. Profundizaremos en temas como interfaces, clases abstractas, patrones de diseño y programación funcional en Java.</p>
+        
+        <div class="card">
+            <h3>Conceptos avanzados de POO</h3>
+            <ul>
+                <li><span class="highlight">Interfaces</span> - Contratos que definen comportamientos sin implementación</li>
+                <li><span class="highlight">Clases abstractas</span> - Clases que no pueden ser instanciadas y pueden contener métodos abstractos</li>
+                <li><span class="highlight">Polimorfismo avanzado</span> - Uso de interfaces y clases abstractas para lograr mayor flexibilidad</li>
+                <li><span class="highlight">Patrones de diseño</span> - Soluciones probadas para problemas comunes en el desarrollo de software</li>
+                <li><span class="highlight">Programación funcional</span> - Uso de expresiones lambda y streams en Java 8+</li>
+            </ul>
+        </div>
+
+        <h3>Ejercicios de POO Avanzada</h3>
+        
+        <div class="card">
+            <h4>Ejercicio 1: Interfaces y Polimorfismo</h4>
+            <p>Este ejercicio muestra cómo implementar interfaces para lograr polimorfismo en Java.</p>
+            <pre style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; margin-top: 15px;">
+// Definición de la interfaz
+interface Figura {
+    double calcularArea();
+    double calcularPerimetro();
+    void mostrarInformacion();
+}
+
+// Implementación para un círculo
+class Circulo implements Figura {
+    private double radio;
+    
+    public Circulo(double radio) {
+        this.radio = radio;
+    }
+    
+    @Override
+    public double calcularArea() {
+        return Math.PI * radio * radio;
+    }
+    
+    @Override
+    public double calcularPerimetro() {
+        return 2 * Math.PI * radio;
+    }
+    
+    @Override
+    public void mostrarInformacion() {
+        System.out.println("Círculo de radio: " + radio);
+        System.out.println("Área: " + calcularArea());
+        System.out.println("Perímetro: " + calcularPerimetro());
+    }
+}
+
+// Implementación para un rectángulo
+class Rectangulo implements Figura {
+    private double base;
+    private double altura;
+    
+    public Rectangulo(double base, double altura) {
+        this.base = base;
+        this.altura = altura;
+    }
+    
+    @Override
+    public double calcularArea() {
+        return base * altura;
+    }
+    
+    @Override
+    public double calcularPerimetro() {
+        return 2 * (base + altura);
+    }
+    
+    @Override
+    public void mostrarInformacion() {
+        System.out.println("Rectángulo de base: " + base + " y altura: " + altura);
+        System.out.println("Área: " + calcularArea());
+        System.out.println("Perímetro: " + calcularPerimetro());
+    }
+}
+
+// Clase principal para probar
+public class EjemploInterfaces {
+    public static void main(String[] args) {
+        // Crear un array de figuras (polimorfismo)
+        Figura[] figuras = new Figura[3];
+        figuras[0] = new Circulo(5);
+        figuras[1] = new Rectangulo(4, 6);
+        figuras[2] = new Circulo(3);
+        
+        // Procesar todas las figuras de forma polimórfica
+        for (Figura figura : figuras) {
+            figura.mostrarInformacion();
+            System.out.println("------------------------");
+        }
+    }
+}</pre>
+            <div style="margin-top: 15px;">
+                <h5>Explicación:</h5>
+                <p>Este ejercicio muestra cómo usar interfaces para implementar el polimorfismo. La interfaz Figura define un contrato que todas las clases que la implementen deben cumplir. Luego, podemos tratar diferentes tipos de figuras de manera uniforme a través de la interfaz común.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h4>Ejercicio 2: Clases Abstractas</h4>
+            <p>Este ejercicio muestra cómo usar clases abstractas para compartir código entre subclases.</p>
+            <pre style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; margin-top: 15px;">
+// Clase abstracta
+abstract class Vehiculo {
+    protected String marca;
+    protected String modelo;
+    protected int año;
+    
+    public Vehiculo(String marca, String modelo, int año) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.año = año;
+    }
+    
+    // Método concreto (implementado)
+    public void mostrarDetalles() {
+        System.out.println("Vehículo: " + marca + " " + modelo + " (" + año + ")");
+    }
+    
+    // Método abstracto (debe ser implementado por las subclases)
+    public abstract void acelerar();
+    
+    // Método abstracto
+    public abstract void frenar();
+}
+
+// Subclase que extiende la clase abstracta
+class Coche extends Vehiculo {
+    private int numeroPuertas;
+    
+    public Coche(String marca, String modelo, int año, int numeroPuertas) {
+        super(marca, modelo, año);
+        this.numeroPuertas = numeroPuertas;
+    }
+    
+    @Override
+    public void acelerar() {
+        System.out.println("El coche " + marca + " " + modelo + " está acelerando");
+    }
+    
+    @Override
+    public void frenar() {
+        System.out.println("El coche " + marca + " " + modelo + " está frenando");
+    }
+    
+    // Método específico de la clase Coche
+    public void abrirPuertas() {
+        System.out.println("Abriendo las " + numeroPuertas + " puertas del coche");
+    }
+}
+
+// Otra subclase
+class Motocicleta extends Vehiculo {
+    private boolean tieneCajon;
+    
+    public Motocicleta(String marca, String modelo, int año, boolean tieneCajon) {
+        super(marca, modelo, año);
+        this.tieneCajon = tieneCajon;
+    }
+    
+    @Override
+    public void acelerar() {
+        System.out.println("La motocicleta " + marca + " " + modelo + " está acelerando rápidamente");
+    }
+    
+    @Override
+    public void frenar() {
+        System.out.println("La motocicleta " + marca + " " + modelo + " está frenando con cuidado");
+    }
+    
+    // Método específico de la clase Motocicleta
+    public void hacerCaballito() {
+        System.out.println("La motocicleta " + marca + " " + modelo + " está haciendo un caballito");
+    }
+}
+
+// Clase principal para probar
+public class EjemploClasesAbstractas {
+    public static void main(String[] args) {
+        // No se puede instanciar una clase abstracta
+        // Vehiculo v = new Vehiculo("Error", "No instanciable", 2023); // Esto daría error
+        
+        Coche coche = new Coche("Toyota", "Corolla", 2022, 4);
+        Motocicleta moto = new Motocicleta("Honda", "CBR", 2023, true);
+        
+        // Usar métodos heredados
+        coche.mostrarDetalles();
+        moto.mostrarDetalles();
+        
+        // Usar métodos implementados (abstractos en la clase padre)
+        coche.acelerar();
+        coche.frenar();
+        
+        moto.acelerar();
+        moto.frenar();
+        
+        // Usar métodos específicos
+        coche.abrirPuertas();
+        moto.hacerCaballito();
+    }
+}</pre>
+            <div style="margin-top: 15px;">
+                <h5>Explicación:</h5>
+                <p>Este ejercicio muestra cómo usar clases abstractas para compartir código entre subclases. La clase abstracta Vehiculo define comportamientos comunes (mostrarDetalles) y declara métodos abstractos que las subclases deben implementar (acelerar y frenar). A diferencia de las interfaces, las clases abstractas pueden contener implementaciones de métodos y atributos.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h4>Ejercicio 3: Patrones de Diseño - Singleton</h4>
+            <p>Este ejercicio muestra cómo implementar el patrón de diseño Singleton en Java.</p>
+            <pre style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; margin-top: 15px;">
+// Implementación del patrón Singleton
+class ConfiguracionApp {
+    // La única instancia de la clase
+    private static ConfiguracionApp instancia;
+    
+    // Atributos de configuración
+    private String nombreApp;
+    private String version;
+    private boolean modoDebug;
+    
+    // Constructor privado para evitar instanciación directa
+    private ConfiguracionApp() {
+        // Valores por defecto
+        nombreApp = "Mi Aplicación";
+        version = "1.0.0";
+        modoDebug = false;
+    }
+    
+    // Método para obtener la única instancia (thread-safe)
+    public static synchronized ConfiguracionApp getInstancia() {
+        if (instancia == null) {
+            instancia = new ConfiguracionApp();
+        }
+        return instancia;
+    }
+    
+    // Getters y setters
+    public String getNombreApp() {
+        return nombreApp;
+    }
+    
+    public void setNombreApp(String nombreApp) {
+        this.nombreApp = nombreApp;
+    }
+    
+    public String getVersion() {
+        return version;
+    }
+    
+    public void setVersion(String version) {
+        this.version = version;
+    }
+    
+    public boolean isModoDebug() {
+        return modoDebug;
+    }
+    
+    public void setModoDebug(boolean modoDebug) {
+        this.modoDebug = modoDebug;
+    }
+    
+    // Método para mostrar la configuración actual
+    public void mostrarConfiguracion() {
+        System.out.println("Configuración de la aplicación:");
+        System.out.println("Nombre: " + nombreApp);
+        System.out.println("Versión: " + version);
+        System.out.println("Modo debug: " + (modoDebug ? "Activado" : "Desactivado"));
+    }
+}
+
+// Clase principal para probar
+public class EjemploSingleton {
+    public static void main(String[] args) {
+        // Obtener la instancia de configuración
+        ConfiguracionApp config = ConfiguracionApp.getInstancia();
+        
+        // Mostrar configuración por defecto
+        config.mostrarConfiguracion();
+        
+        // Modificar la configuración
+        config.setNombreApp("Super App");
+        config.setVersion("2.0.1");
+        config.setModoDebug(true);
+        
+        System.out.println("\nDespués de modificar:");
+        config.mostrarConfiguracion();
+        
+        // Obtener otra referencia a la misma instancia
+        ConfiguracionApp otraReferencia = ConfiguracionApp.getInstancia();
+        
+        System.out.println("\nDesde otra referencia:");
+        otraReferencia.mostrarConfiguracion();
+        
+        // Comprobar que ambas referencias apuntan al mismo objeto
+        System.out.println("\n¿Son el mismo objeto? " + (config == otraReferencia));
+    }
+}</pre>
+            <div style="margin-top: 15px;">
+                <h5>Explicación:</h5>
+                <p>Este ejercicio implementa el patrón de diseño Singleton, que garantiza que una clase tenga una única instancia y proporciona un punto de acceso global a ella. Es útil para recursos compartidos como configuraciones, conexiones a bases de datos o caches. El constructor privado evita la instanciación directa, y el método estático getInstancia() controla la creación y acceso a la única instancia.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h4>Ejercicio 4: Programación Funcional con Lambda y Streams</h4>
+            <p>Este ejercicio muestra cómo usar expresiones lambda y streams para procesar colecciones de datos de manera más concisa y expresiva.</p>
+            <pre style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; margin-top: 15px;">
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+class Producto {
+    private String nombre;
+    private double precio;
+    private String categoria;
+    
+    public Producto(String nombre, double precio, String categoria) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.categoria = categoria;
+    }
+    
+    public String getNombre() {
+        return nombre;
+    }
+    
+    public double getPrecio() {
+        return precio;
+    }
+    
+    public String getCategoria() {
+        return categoria;
+    }
+    
+    @Override
+    public String toString() {
+        return nombre + " - $" + precio + " (" + categoria + ")";
+    }
+}
+
+public class EjemploLambdaStreams {
+    public static void main(String[] args) {
+        // Crear una lista de productos
+        List<Producto> productos = Arrays.asList(
+            new Producto("Laptop", 1200.0, "Electrónica"),
+            new Producto("Smartphone", 800.0, "Electrónica"),
+            new Producto("Libro Java", 45.0, "Libros"),
+            new Producto("Teclado", 25.0, "Electrónica"),
+            new Producto("Novela", 15.0, "Libros"),
+            new Producto("Monitor", 200.0, "Electrónica")
+        );
+        
+        System.out.println("Lista original de productos:");
+        productos.forEach(System.out::println);
+        
+        // Filtrar productos de electrónica
+        System.out.println("\nProductos de electrónica:");
+        List<Producto> electronicos = productos.stream()
+                .filter(p -> p.getCategoria().equals("Electrónica"))
+                .collect(Collectors.toList());
+        electronicos.forEach(System.out::println);
+        
+        // Calcular el precio total de todos los productos
+        double precioTotal = productos.stream()
+                .mapToDouble(Producto::getPrecio)
+                .sum();
+        System.out.println("\nPrecio total de todos los productos: $" + precioTotal);
+        
+        // Encontrar el producto más caro
+        Producto masCaro = productos.stream()
+                .max((p1, p2) -> Double.compare(p1.getPrecio(), p2.getPrecio()))
+                .orElse(null);
+        System.out.println("\nProducto más caro: " + masCaro);
+        
+        // Agrupar productos por categoría y contar
+        System.out.println("\nNúmero de productos por categoría:");
+        productos.stream()
+                .collect(Collectors.groupingBy(Producto::getCategoria, Collectors.counting()))
+                .forEach((categoria, cantidad) -> System.out.println(categoria + ": " + cantidad));
+        
+        // Aplicar descuento del 10% a productos de más de $100
+        System.out.println("\nProductos con descuento del 10% (si precio > $100):");
+        productos.stream()
+                .filter(p -> p.getPrecio() > 100)
+                .map(p -> new Producto(p.getNombre(), p.getPrecio() * 0.9, p.getCategoria()))
+                .forEach(System.out::println);
+    }
+}</pre>
+            <div style="margin-top: 15px;">
+                <h5>Explicación:</h5>
+                <p>Este ejercicio muestra cómo usar la programación funcional en Java con expresiones lambda y streams para procesar colecciones de datos. Los streams permiten realizar operaciones de filtrado, mapeo, reducción y agrupación de manera declarativa y concisa. Las expresiones lambda proporcionan una sintaxis compacta para implementar interfaces funcionales.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JAVA AVANZADO: FICHEROS -->
+    <div class="section fade-in" id="Ficheros">
+        <h2>JAVA AVANZADO: MANEJO DE FICHEROS</h2>
+        <p>En este módulo exploraremos cómo Java maneja los ficheros, permitiéndonos leer y escribir información persistente. El manejo de ficheros es fundamental para cualquier aplicación que necesite almacenar datos de forma permanente.</p>
+        
+        <div class="card">
+            <h3>Tipos de ficheros en Java</h3>
+            <ul>
+                <li><span class="highlight">Ficheros de texto</span> - Almacenan caracteres legibles por humanos</li>
+                <li><span class="highlight">Ficheros binarios</span> - Almacenan datos en formato binario</li>
+                <li><span class="highlight">Objetos serializados</span> - Permiten guardar y recuperar objetos Java completos</li>
+            </ul>
+        </div>
+
+        <h3>Ejercicios con Ficheros de Texto</h3>
+        
+        <div class="card">
+            <h4>Ejercicio 1: Lectura y escritura de ficheros de texto</h4>
+            <p>Este ejercicio muestra cómo leer y escribir en ficheros de texto usando las clases FileReader, FileWriter, BufferedReader y BufferedWriter.</p>
+            <pre style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; margin-top: 15px;">
+import java.io.*;
+
+public class ManejoFicheros {
+    public static void main(String[] args) {
+        // Ruta del fichero
+        String rutaFichero = "datos.txt";
+        
+        // Escribir en un fichero
+        try {
+            FileWriter fw = new FileWriter(rutaFichero);
+            BufferedWriter bw = new BufferedWriter(fw);
+            
+            bw.write("Línea 1: Esto es una prueba de escritura en fichero");
+            bw.newLine();
+            bw.write("Línea 2: Continuamos escribiendo datos");
+            bw.newLine();
+            bw.write("Línea 3: Finalizamos la escritura");
+            
+            bw.close();
+            fw.close();
+            
+            System.out.println("Fichero escrito correctamente");
+        } catch (IOException e) {
+            System.err.println("Error al escribir en el fichero: " + e.getMessage());
+        }
+        
+        // Leer de un fichero
+        try {
+            FileReader fr = new FileReader(rutaFichero);
+            BufferedReader br = new BufferedReader(fr);
+            
+            String linea;
+            System.out.println("Contenido del fichero:");
+            
+            while ((linea = br.readLine()) != null) {
+                System.out.println(linea);
+            }
+            
+            br.close();
+            fr.close();
+        } catch (IOException e) {
+            System.err.println("Error al leer el fichero: " + e.getMessage());
+        }
+    }
+}</pre>
+            <div style="margin-top: 15px;">
+                <h5>Explicación:</h5>
+                <p>Este ejercicio muestra cómo escribir y leer ficheros de texto en Java. Primero, creamos un fichero y escribimos tres líneas de texto usando FileWriter y BufferedWriter. Luego, leemos el contenido del fichero línea por línea usando FileReader y BufferedReader.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JAVA AVANZADO: SERIALIZACIÓN -->
+    <div class="section fade-in" id="Serializacion">
+        <h2>JAVA AVANZADO: SERIALIZACIÓN DE OBJETOS</h2>
+        <p>La serialización es el proceso de convertir un objeto en una secuencia de bytes para almacenarlo o transmitirlo. En Java, podemos serializar objetos para guardarlos en ficheros o enviarlos a través de la red.</p>
+        
+        <div class="card">
+            <h4>Ejercicio: Serialización y deserialización de objetos</h4>
+            <p>Este ejercicio muestra cómo serializar y deserializar objetos en Java.</p>
+            <pre style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; margin-top: 15px;">
+import java.io.*;
+
+// Clase que implementa Serializable
+class Estudiante implements Serializable {
+    // Necesario para la serialización
+    private static final long serialVersionUID = 1L;
+    
+    private String nombre;
+    private int edad;
+    private double promedio;
+    
+    public Estudiante(String nombre, int edad, double promedio) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.promedio = promedio;
+    }
+    
+    @Override
+    public String toString() {
+        return "Estudiante [nombre=" + nombre + ", edad=" + edad + ", promedio=" + promedio + "]";
+    }
+}
+
+public class SerializacionEjemplo {
+    public static void main(String[] args) {
+        // Crear un objeto Estudiante
+        Estudiante estudiante = new Estudiante("Ana García", 20, 8.75);
+        
+        // Serializar el objeto (guardarlo en un fichero)
+        try {
+            FileOutputStream fileOut = new FileOutputStream("estudiante.ser");
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            
+            out.writeObject(estudiante);
+            
+            out.close();
+            fileOut.close();
+            
+            System.out.println("Objeto serializado y guardado en 'estudiante.ser'");
+        } catch (IOException e) {
+            System.err.println("Error al serializar: " + e.getMessage());
+        }
+        
+        // Deserializar el objeto (recuperarlo del fichero)
+        try {
+            FileInputStream fileIn = new FileInputStream("estudiante.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            
+            Estudiante estudianteRecuperado = (Estudiante) in.readObject();
+            
+            in.close();
+            fileIn.close();
+            
+            System.out.println("Objeto deserializado:");
+            System.out.println(estudianteRecuperado);
+        } catch (IOException | ClassNotFoundException e) {
+            System.err.println("Error al deserializar: " + e.getMessage());
+        }
+    }
+}</pre>
+            <div style="margin-top: 15px;">
+                <h5>Explicación:</h5>
+                <p>Este ejercicio muestra cómo serializar un objeto Estudiante y guardarlo en un fichero, y luego cómo deserializarlo para recuperar el objeto. La clase Estudiante implementa la interfaz Serializable, lo que permite que sus instancias sean convertidas a bytes y viceversa.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JAVA AVANZADO: BASES DE DATOS -->
+    <div class="section fade-in" id="BBDD">
+        <h2>JAVA AVANZADO: CONEXIÓN A BASES DE DATOS</h2>
+        <p>Java Database Connectivity (JDBC) es una API que permite la ejecución de operaciones sobre bases de datos desde el lenguaje de programación Java. JDBC actúa como un puente entre una aplicación Java y una base de datos.</p>
+        
+        <div class="card">
+            <h3>Componentes principales de JDBC</h3>
+            <ul>
+                <li><span class="highlight">DriverManager</span> - Gestiona los controladores de bases de datos</li>
+                <li><span class="highlight">Connection</span> - Representa una conexión con la base de datos</li>
+                <li><span class="highlight">Statement</span> - Permite ejecutar consultas SQL</li>
+                <li><span class="highlight">ResultSet</span> - Almacena los resultados de una consulta</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h4>Ejercicio: Conexión a una base de datos MySQL</h4>
+            <p>Este ejercicio muestra cómo conectarse a una base de datos MySQL, realizar consultas y actualizar datos.</p>
+            <pre style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; margin-top: 15px;">
+import java.sql.*;
+
+public class ConexionBD {
+    // Datos de conexión
+    private static final String URL = "jdbc:mysql://localhost:3306/mibasedatos";
+    private static final String USUARIO = "usuario";
+    private static final String CONTRASEÑA = "contraseña";
+    
+    public static void main(String[] args) {
+        Connection conexion = null;
+        Statement stmt = null;
+        ResultSet rs = null;
+        
+        try {
+            // Cargar el driver de MySQL
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            
+            // Establecer la conexión
+            System.out.println("Conectando a la base de datos...");
+            conexion = DriverManager.getConnection(URL, USUARIO, CONTRASEÑA);
+            System.out.println("Conexión establecida con éxito!");
+            
+            // Crear un statement
+            stmt = conexion.createStatement();
+            
+            // Ejecutar una consulta SELECT
+            String sql = "SELECT id, nombre, email FROM usuarios";
+            rs = stmt.executeQuery(sql);
+            
+            // Procesar los resultados
+            System.out.println("Usuarios registrados:");
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String nombre = rs.getString("nombre");
+                String email = rs.getString("email");
+                
+                System.out.println("ID: " + id + ", Nombre: " + nombre + ", Email: " + email);
+            }
+            
+            // Insertar un nuevo usuario (usando PreparedStatement para mayor seguridad)
+            String sqlInsert = "INSERT INTO usuarios (nombre, email) VALUES (?, ?)";
+            PreparedStatement pstmt = conexion.prepareStatement(sqlInsert);
+            pstmt.setString(1, "Nuevo Usuario");
+            pstmt.setString(2, "nuevo@ejemplo.com");
+            
+            int filasAfectadas = pstmt.executeUpdate();
+            System.out.println(filasAfectadas + " fila(s) insertada(s)");
+            
+            pstmt.close();
+            
+        } catch (SQLException e) {
+            System.err.println("Error SQL: " + e.getMessage());
+        } catch (ClassNotFoundException e) {
+            System.err.println("Error al cargar el driver: " + e.getMessage());
+        } finally {
+            // Cerrar recursos
+            try {
+                if (rs != null) rs.close();
+                if (stmt != null) stmt.close();
+                if (conexion != null) conexion.close();
+                System.out.println("Conexión cerrada");
+            } catch (SQLException e) {
+                System.err.println("Error al cerrar: " + e.getMessage());
+            }
+        }
+    }
+}</pre>
+            <div style="margin-top: 15px;">
+                <h5>Explicación:</h5>
+                <p>Este ejercicio muestra cómo conectarse a una base de datos MySQL usando JDBC. Primero cargamos el driver, establecemos la conexión, y luego realizamos operaciones como consultar datos (SELECT) e insertar nuevos registros (INSERT). También se muestra el uso de PreparedStatement para evitar inyecciones SQL.</p>
+            </div>
+        </div>
+    </div>
+    
+    <hr>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>Copyright © 2024 - El Portfolio de Hugo Rincón</p>
+            <div class="footer-links">
+                <a href="mailto:hugo.rincon.arroyo@gmail.com" class="footer-link">
+                    <img src="correo_icono.webp" width="20" height="20" alt="Correo">
+                    Envíame un correo
+                </a>
+                <a href="tel:+34630352893" class="footer-link">
+                    <img src="icono_telefono.png" width="20" height="20" alt="Teléfono">
+                    Llamar por teléfono
+                </a>
+                <a href="CVHugoRincón-0.pdf" download="CVHugoRincón-0.pdf" class="footer-link">
+                    <img src="desgarga_icono.png" width="20" height="20" alt="CV">
+                    Descargar mi CV
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

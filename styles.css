@@ -1,0 +1,843 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+
+
+/* Variables de colores y estilos para todo el sitio */
+:root {
+    --primary-color: #2c3e50; /* Azul oscuro para elementos principales */
+    --secondary-color: #3498db; /* Azul claro para acentos y elementos interactivos */
+    --accent-color: #e74c3c; /* Rojo para llamadas a la acción y destacados */
+    --light-color: #ecf0f1; /* Gris muy claro para fondos y texto sobre oscuro */
+    --dark-color: #2c3e50; /* Azul oscuro para fondos y contraste */
+    --text-color: #34495e; /* Gris azulado para texto principal */
+    --border-radius: 8px; /* Redondeo de esquinas consistente */
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil para elementos elevados */
+    --transition: all 0.3s ease; /* Transición suave para efectos */
+}
+
+/* Estilo del cuerpo del documento */
+body {
+    font-family: 'Poppins', sans-serif; /* Tipografía principal */
+    color: var(--text-color);
+    background-color: #f5f7fa; /* Fondo gris muy claro */
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal que centra el contenido */
+.container {
+    max-width: 1200px; /* Ancho máximo para pantallas grandes */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 0 20px; /* Espacio en los laterales */
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color); /* Fondo azul oscuro */
+    color: white; /* Texto blanco para contraste */
+    padding: 30px 0; /* Espacio vertical */
+    text-align: center; /* Centrado del contenido */
+    box-shadow: var(--box-shadow); /* Sombra sutil */
+    position: relative; /* Para posicionar el pseudo-elemento ::after */
+}
+
+/* Línea decorativa en la parte inferior de la cabecera */
+header::after {
+    content: ''; /* Necesario para pseudo-elementos */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color)); /* Degradado de colores */
+}
+
+/* Título principal de la cabecera */
+header h1 {
+    font-size: 2.5rem; /* Tamaño grande para el título */
+    margin: 0;
+    font-weight: 700; /* Negrita */
+    letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+/* Menú de navegación desplegable */
+nav {
+    text-align: center; /* Centrado horizontal */
+    margin-top: 20px; /* Espacio superior */
+    position: relative; /* Para posicionamiento de submenús */
+}
+
+/* Lista principal del menú */
+nav ul {
+    display: inline-block; /* Para centrar horizontalmente */
+    list-style: none; /* Elimina los marcadores de lista */
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color); /* Mismo color que la cabecera */
+    border-radius: var(--border-radius); /* Esquinas redondeadas */
+}
+
+/* Elementos de la lista principal */
+nav ul li {
+    display: inline-block; /* Elementos en línea horizontal */
+    position: relative; /* Para posicionar submenús */
+    margin: 0;
+    padding: 0;
+}
+
+/* Enlaces del menú principal */
+nav ul li a {
+    color: var(--light-color); /* Color claro para contraste */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1.1rem; /* Tamaño de texto */
+    padding: 12px 20px; /* Espacio interno para área de clic */
+    display: block; /* Para que todo el área sea clicable */
+    transition: var(--transition); /* Efecto suave al pasar el cursor */
+}
+
+/* Efecto al pasar el cursor sobre enlaces */
+nav ul li:hover > a {
+    color: var(--secondary-color); /* Cambia a color secundario */
+}
+
+/* Submenú desplegable */
+nav ul li ul {
+    position: absolute; /* Posicionamiento absoluto respecto al elemento padre */
+    top: 100%; /* Justo debajo del elemento padre */
+    left: 0;
+    width: 200px; /* Ancho fijo */
+    background-color: var(--dark-color); /* Fondo más oscuro que el menú principal */
+    border-radius: 0 0 var(--border-radius) var(--border-radius); /* Redondeo solo en esquinas inferiores */
+    opacity: 0; /* Inicialmente invisible */
+    visibility: hidden; /* Oculto hasta hover */
+    transform: translateY(10px); /* Desplazado hacia abajo para animación */
+    transition: all 0.3s ease; /* Transición suave */
+    z-index: 100; /* Por encima de otros elementos */
+    box-shadow: var(--box-shadow); /* Sombra para efecto elevado */
+}
+
+/* Mostrar submenú al pasar el cursor */
+nav ul li:hover > ul {
+    opacity: 1; /* Visible */
+    visibility: visible;
+    transform: translateY(0); /* Vuelve a posición normal */
+}
+
+/* Elementos del submenú */
+nav ul li ul li {
+    display: block; /* Elementos en bloque (vertical) */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador sutil */
+}
+
+/* Eliminar borde del último elemento */
+nav ul li ul li:last-child {
+    border-bottom: none;
+}
+
+/* Enlaces del submenú */
+nav ul li ul li a {
+    padding: 10px 15px; /* Menos padding que enlaces principales */
+    font-size: 1rem; /* Tamaño de texto más pequeño */
+}
+
+/* Para enlaces simples sin submenú */
+nav a.simple-link {
+    color: var(--light-color); /* Color claro para contraste */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1.1rem; /* Tamaño de texto */
+    margin: 0 15px; /* Espacio horizontal entre enlaces */
+    padding: 8px 15px; /* Espacio interno */
+    border-radius: var(--border-radius); /* Esquinas redondeadas */
+    transition: var(--transition); /* Transición suave */
+    position: relative; /* Para posicionar el pseudo-elemento ::after */
+}
+
+/* Línea decorativa bajo el enlace (inicialmente invisible) */
+nav a.simple-link::after {
+    content: ''; /* Necesario para pseudo-elementos */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Inicialmente sin ancho */
+    height: 2px;
+    background-color: var(--secondary-color); /* Color secundario */
+    transition: var(--transition); /* Transición suave */
+}
+
+/* Cambio de color al pasar el cursor */
+nav a.simple-link:hover {
+    color: var(--secondary-color); /* Cambia a color secundario */
+}
+
+/* Animación de la línea al pasar el cursor */
+nav a.simple-link:hover::after {
+    width: 100%; /* Se expande al 100% del ancho */
+}
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente */
+    gap: 30px;
+    flex-wrap: wrap; /* Para que en pantallas pequeñas se apile */
+    text-align: left; /* Opcional: cambia a izquierda si no quieres centrado */
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+
+.header-content {
+    flex: 1;
+    min-width: 250px; /* Para evitar que se haga demasiado estrecho */
+}
+
+/* Secciones */
+.section {
+    margin: 40px auto; /* Margen vertical y centrado horizontal */
+    background-color: white; /* Fondo blanco */
+    border-radius: var(--border-radius); /* Esquinas redondeadas */
+    padding: 30px; /* Espacio interno */
+    box-shadow: var(--box-shadow); /* Sombra sutil */
+    max-width: 80%; /* Ancho máximo */
+    transition: var(--transition); /* Transición suave */
+    border-top: 4px solid var(--secondary-color); /* Borde superior decorativo */
+}
+
+/* Efecto de elevación al pasar el cursor */
+.section:hover {
+    transform: translateY(-5px); /* Se eleva ligeramente */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Título de sección */
+.section h2 {
+    color: var(--primary-color); /* Color primario */
+    font-size: 1.8rem; /* Tamaño grande */
+    text-align: center; /* Centrado */
+    margin-bottom: 25px; /* Espacio inferior */
+    position: relative; /* Para posicionar el pseudo-elemento ::after */
+    padding-bottom: 15px; /* Espacio para la línea decorativa */
+}
+
+/* Línea decorativa bajo el título */
+.section h2::after {
+    content: ''; /* Necesario para pseudo-elementos */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centrado horizontal */
+    width: 80px; /* Ancho fijo */
+    height: 3px; /* Altura de la línea */
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color)); /* Degradado */
+}
+
+/* Subtítulo nivel 3 */
+.section h3 {
+    color: var(--secondary-color); /* Color secundario */
+    margin-top: 25px; /* Espacio superior */
+    margin-bottom: 15px; /* Espacio inferior */
+}
+
+/* Subtítulo nivel 4 */
+.section h4 {
+    color: var(--accent-color); /* Color acento */
+    margin-top: 15px; /* Espacio superior */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+/* Perfil */
+.profile {
+    text-align: center; /* Centrado del contenido */
+    margin-top: 50px; /* Espacio superior */
+    padding: 20px; /* Espacio interno */
+}
+
+/* Imagen de perfil circular */
+.profile-img {
+    border-radius: 50%; /* Forma circular */
+    width: 200px; /* Ancho fijo */
+    height: 200px; /* Altura fija (cuadrado) */
+    border: 4px solid var(--secondary-color); /* Borde de color secundario */
+    object-fit: cover; /* Ajuste de imagen sin distorsión */
+    transition: var(--transition); /* Transición suave */
+    box-shadow: var(--box-shadow); /* Sombra sutil */
+}
+
+/* Efecto al pasar el cursor sobre la imagen */
+.profile-img:hover {
+    transform: scale(1.05); /* Ligero aumento de tamaño */
+    border-color: var(--accent-color); /* Cambio de color del borde */
+}
+
+/* Título del perfil */
+.profile h2 {
+    font-size: 2.2rem; /* Tamaño grande */
+    margin-top: 20px; /* Espacio superior */
+    color: var(--primary-color); /* Color primario */
+}
+
+/* Párrafo de descripción */
+.profile p {
+    font-size: 1.2rem; /* Tamaño de texto */
+    line-height: 1.6; /* Altura de línea */
+    max-width: 800px; /* Ancho máximo */
+    margin: 20px auto; /* Margen vertical y centrado horizontal */
+    padding: 0 20px; /* Espacio horizontal */
+}
+
+/* Listas */
+/* Estilos comunes para listas ordenadas y no ordenadas */
+ul, ol {
+    padding-left: 20px; /* Sangría izquierda */
+    margin: 15px 0; /* Margen vertical */
+}
+
+/* Elementos de lista */
+ul li, ol li {
+    margin-bottom: 12px; /* Espacio entre elementos */
+    position: relative; /* Para posicionamiento de marcadores personalizados */
+    padding-left: 5px; /* Espacio para el marcador */
+}
+
+/* Listas no ordenadas */
+ul {
+    list-style-type: none; /* Elimina marcadores predeterminados */
+}
+
+/* Marcador personalizado para listas no ordenadas */
+ul li::before {
+    content: "•"; /* Punto como marcador */
+    color: var(--color-secundario); /* Color secundario */
+    font-weight: bold; /* Negrita */
+    display: inline-block;
+    width: 1em; /* Ancho fijo */
+    margin-left: -1em; /* Alineación */
+}
+
+/* Marcador para listas ordenadas */
+ol li::marker {
+    color: var(--color-secundario); /* Color secundario */
+    font-weight: bold; /* Negrita */
+}
+
+
+
+/* Estilos para tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background-color: #3498db; /* Color azul para los encabezados */
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+td {
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f7fb; /* Azul muy claro para filas pares */
+}
+
+tr:hover {
+    background-color: #e6f2fa; /* Azul claro al pasar el cursor */
+}
+
+
+/* Imágenes */
+.img-container {
+    display: flex; /* Flexbox para centrado */
+    justify-content: center; /* Centrado horizontal */
+    margin: 30px auto; /* Margen vertical y centrado */
+}
+
+/* Contenido de imagen */
+.img-content {
+    max-width: 100%; /* Ancho máximo responsivo */
+    height: auto; /* Altura automática proporcional */
+    border-radius: var(--border-radius); /* Esquinas redondeadas */
+    box-shadow: var(--box-shadow); /* Sombra sutil */
+    transition: var(--transition); /* Transición suave */
+}
+
+/* Efecto al pasar el cursor sobre la imagen */
+.img-content:hover {
+    transform: scale(1.02); /* Ligero aumento de tamaño */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Formulario */
+form {
+    max-width: 800px; /* Ancho máximo */
+    margin: 0 auto; /* Centrado horizontal */
+    background-color: white; /* Fondo blanco */
+    padding: 30px; /* Espacio interno */
+    border-radius: var(--border-radius); /* Esquinas redondeadas */
+    box-shadow: var(--box-shadow); /* Sombra sutil */
+}
+
+/* Conjunto de campos relacionados */
+fieldset {
+    border: 1px solid #e0e0e0; /* Borde sutil */
+    padding: 20px; /* Espacio interno */
+    border-radius: var(--border-radius); /* Esquinas redondeadas */
+    margin-bottom: 25px; /* Espacio inferior */
+    background-color: #f9f9f9; /* Fondo gris muy claro */
+    position: relative; /* Para posicionamiento de leyenda */
+}
+
+/* Leyenda del conjunto de campos */
+legend {
+    font-weight: 600; /* Semi-negrita */
+    color: var(--primary-color); /* Color primario */
+    font-size: 1.3rem; /* Tamaño de texto */
+    padding: 0 10px; /* Espacio horizontal */
+    background-color: white; /* Fondo blanco */
+    border-radius: 4px; /* Esquinas redondeadas */
+}
+
+/* Campos de entrada, áreas de texto y selectores */
+input, textarea, select {
+    width: 100%; /* Ancho completo */
+    padding: 12px 15px; /* Espacio interno */
+    border: 1px solid #e0e0e0; /* Borde sutil */
+    border-radius: var(--border-radius); /* Esquinas redondeadas */
+    margin-bottom: 15px; /* Espacio inferior */
+    font-size: 1rem; /* Tamaño de texto */
+    color: var(--text-color); /* Color de texto */
+    transition: var(--transition); /* Transición suave */
+    font-family: 'Poppins', sans-serif; /* Tipografía */
+}
+
+/* Efecto al enfocar campos */
+input:focus, textarea:focus, select:focus {
+    border-color: var(--secondary-color); /* Borde de color secundario */
+    outline: none; /* Sin contorno predeterminado */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Sombra de enfoque */
+}
+
+/* Etiquetas de campos */
+label {
+    display: block; /* Bloque para ocupar línea completa */
+    margin-bottom: 8px; /* Espacio inferior */
+    font-size: 1.1rem; /* Tamaño de texto */
+    color: var(--text-color); /* Color de texto */
+    font-weight: 500; /* Semi-negrita */
+}
+
+/* Botones */
+button {
+    background-color: var(--secondary-color); /* Fondo de color secundario */
+    color: white; /* Texto blanco */
+    padding: 12px 20px; /* Espacio interno */
+    border: none; /* Sin borde */
+    border-radius: var(--border-radius); /* Esquinas redondeadas */
+    font-size: 1.2rem; /* Tamaño de texto */
+    cursor: pointer; /* Cursor de mano */
+    width: 100%; /* Ancho completo */
+    transition: var(--transition); /* Transición suave */
+    font-weight: 500; /* Semi-negrita */
+    letter-spacing: 0.5px; /* Espaciado entre letras */
+}
+
+/* Efecto al pasar el cursor sobre botones */
+button:hover {
+    background-color: var(--primary-color); /* Cambia a color primario */
+    transform: translateY(-3px); /* Se eleva ligeramente */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Botones de radio */
+input[type="radio"] {
+    width: auto; /* Ancho automático */
+    margin-right: 10px; /* Espacio a la derecha */
+}
+
+/* Grupo de botones de radio */
+.radio-group {
+    display: flex; /* Flexbox para alineación */
+    flex-wrap: wrap; /* Permite salto de línea */
+    gap: 20px; /* Espacio entre opciones */
+    margin: 10px 0; /* Margen vertical */
+}
+
+/* Opción individual de radio */
+.radio-option {
+    display: flex; /* Flexbox para alineación */
+    align-items: center; /* Centrado vertical */
+    background-color: white; /* Fondo blanco */
+    padding: 8px 15px; /* Espacio interno */
+    border-radius: var(--border-radius); /* Esquinas redondeadas */
+    border: 1px solid #e0e0e0; /* Borde sutil */
+    transition: var(--transition); /* Transición suave */
+}
+
+/* Efecto al pasar el cursor sobre la opción */
+.radio-option:hover {
+    border-color: var(--secondary-color); /* Borde de color secundario */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilo para la etiqueta cuando el radio está seleccionado */
+.radio-option input[type="radio"]:checked + label {
+    color: var(--secondary-color); /* Color secundario */
+    font-weight: 600; /* Semi-negrita */
+}
+
+/* Barra de progreso */
+.progress-container {
+    position: relative; /* Para posicionamiento de elementos internos */
+    width: 100%; /* Ancho completo */
+    height: 30px; /* Altura fija */
+    border-radius: 20px; /* Esquinas muy redondeadas */
+    background: #e0e0e0; /* Fondo gris claro */
+    overflow: hidden; /* Oculta desbordamiento */
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1); /* Sombra interna */
+    margin: 20px 0; /* Margen vertical */
+}
+
+/* Barra de avance */
+.progress-bar {
+    height: 100%; /* Altura completa */
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color)); /* Degradado */
+    border-radius: 20px; /* Esquinas muy redondeadas */
+    transition: width 1s ease-in-out; /* Transición suave para cambios de ancho */
+    position: relative; /* Para posicionamiento del pseudo-elemento */
+    overflow: hidden; /* Oculta desbordamiento */
+}
+
+/* Patrón decorativo animado */
+.progress-bar::after {
+    content: ''; /* Necesario para pseudo-elementos */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Patrón de rayas diagonales */
+    background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0.2) 75%,
+        transparent 75%,
+        transparent
+    );
+    background-size: 30px 30px; /* Tamaño del patrón */
+    animation: move 2s linear infinite; /* Animación continua */
+    z-index: 1; /* Por encima de la barra */
+}
+
+/* Animación para el patrón */
+@keyframes move {
+    0% {
+        background-position: 0 0; /* Posición inicial */
+    }
+    100% {
+        background-position: 30px 30px; /* Posición final */
+    }
+}
+
+
+/* Cajas de información */
+.info-box {
+    max-width: 800px; /* Ancho máximo */
+    margin: 40px auto; /* Margen vertical y centrado horizontal */
+    background-color: white; /* Fondo blanco */
+    padding: 30px; /* Espacio interno */
+    border-radius: var(--border-radius); /* Esquinas redondeadas */
+    box-shadow: var(--box-shadow); /* Sombra sutil */
+    transition: var(--transition); /* Transición suave */
+    border-left: 4px solid var(--secondary-color); /* Borde izquierdo decorativo */
+}
+
+/* Efecto al pasar el cursor */
+.info-box:hover {
+    transform: translateY(-5px); /* Se eleva ligeramente */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Título de la caja de información */
+.info-box h2 {
+    color: var(--primary-color); /* Color primario */
+    font-size: 1.8rem; /* Tamaño grande */
+    margin-top: 0; /* Sin margen superior */
+    text-align: center; /* Centrado */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Párrafo en la caja de información */
+.info-box p {
+    font-size: 1.1rem; /* Tamaño de texto */
+    text-align: center; /* Centrado */
+}
+
+/* Enlaces */
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 40px 0 30px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de enlaces en el pie de página */
+.footer-links {
+    display: flex; /* Flexbox para alineación */
+    justify-content: center; /* Centrado horizontal */
+    flex-wrap: wrap; /* Permite salto de línea en pantallas pequeñas */
+    gap: 25px; /* Espacio entre enlaces */
+    margin-top: 20px; /* Espacio superior */
+}
+
+/* Enlace del pie de página */
+.footer-link {
+    display: flex; /* Flexbox para alineación */
+    align-items: center; /* Centrado vertical */
+    color: var(--light-color); /* Color claro para contraste */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1rem; /* Tamaño de texto */
+    transition: var(--transition); /* Transición suave */
+    padding: 8px 15px; /* Espacio interno */
+    border-radius: var(--border-radius); /* Esquinas redondeadas */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+}
+footer .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Enlaces de redes sociales */
+/* Estilo específico para GitHub con su color corporativo */
+.github-link {
+    background-color: #333; /* Gris oscuro característico de GitHub */
+    color: white; /* Texto blanco para contraste */
+}
+
+/* Estilo específico para LinkedIn con su color corporativo */
+.linkedin-link {
+    background-color: #0077B5; /* Azul característico de LinkedIn */
+    color: white; /* Texto blanco para contraste */
+}
+
+/* Estilo específico para Instagram con su color corporativo */
+.instagram-link {
+    background-color: #E1306C; /* Rosa característico de Instagram */
+    color: white; /* Texto blanco para contraste */
+}
+
+/* Efecto al pasar el cursor sobre enlaces del pie */
+.footer-link:hover {
+    transform: translateY(-3px); /* Se eleva ligeramente */
+    color: white; /* Texto blanco */
+    background-color: var(--secondary-color); /* Fondo de color secundario */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Imágenes dentro de enlaces del pie */
+.footer-link img {
+    margin-right: 8px; /* Espacio a la derecha */
+}
+
+/* Separador */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+    margin: 40px 0;
+}
+
+/* Efectos adicionales */
+.highlight {
+    background-color: rgba(52, 152, 219, 0.1);
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+/* Tarjetas de contenido */
+.card {
+    background-color: white; /* Fondo blanco */
+    border-radius: var(--border-radius); /* Esquinas redondeadas */
+    box-shadow: var(--box-shadow); /* Sombra sutil */
+    padding: 20px; /* Espacio interno */
+    margin: 15px 0; /* Margen vertical */
+    transition: var(--transition); /* Transición suave */
+    border-left: 3px solid var(--secondary-color); /* Borde izquierdo decorativo */
+}
+
+/* Efecto al pasar el cursor sobre la tarjeta */
+.card:hover {
+    transform: translateY(-3px); /* Se eleva ligeramente */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Animaciones */
+/* Definición de la animación de aparición */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; /* Comienza invisible */
+        transform: translateY(20px); /* Desplazado hacia abajo */
+    }
+    to { 
+        opacity: 1; /* Termina completamente visible */
+        transform: translateY(0); /* En su posición final */
+    }
+}
+
+/* Animación de aparición */
+.fade-in {
+    animation: fadeIn 0.8s ease forwards; /* Aplica la animación */
+}
+
+/* Retrasos para animaciones secuenciales */
+.delay-1 { animation-delay: 0.2s; } /* Pequeño retraso */
+.delay-2 { animation-delay: 0.4s; } /* Retraso medio */
+.delay-3 { animation-delay: 0.6s; } /* Retraso mayor */
+.delay-4 { animation-delay: 0.8s; } /* Retraso máximo */
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    nav a {
+        font-size: 1rem;
+        margin: 0 8px;
+    }
+    
+    .section {
+        max-width: 90%;
+        padding: 20px;
+    }
+    
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .profile h2 {
+        font-size: 1.8rem;
+    }
+    
+    .profile p {
+        font-size: 1rem;
+    }
+    
+    .section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .info-box h2 {
+        font-size: 1.5rem;
+    }
+    
+    .info-box p {
+        font-size: 1rem;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    nav a {
+        margin: 5px 0;
+    }
+    
+    .section {
+        max-width: 95%;
+        padding: 15px;
+    }
+    
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    th, td {
+        padding: 8px;
+    }
+}

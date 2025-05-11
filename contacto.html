@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Portfolio de Hugo Rincón</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Cabecera de la página -->
+    <header>
+        <div class="container">
+            <h1 class="fade-in">Contacto</h1>
+            <p class="fade-in delay-1">¡Hola! Si deseas ponerte en contacto conmigo, por favor llena el siguiente formulario. ¡Estaré encantado de saber de ti!</p>
+            <!-- Menú de navegación principal -->
+            <nav>
+                <ul>
+                    <li><a href="Index.html" class="fade-in delay-1">Inicio</a></li>
+                    <li>
+                        <a href="programacion.html" class="fade-in delay-2">Programación</a>
+                        <!-- Submenú desplegable -->
+                        <ul>
+                            <li><a href="programacion.html#HolaMundo">Hola Mundo</a></li>
+                            <li><a href="programacion.html#OperadoresJava">Operadores Java</a></li>
+                            <li><a href="programacion.html#EstructurasControl">Estructuras de Control</a></li>
+                            <li><a href="programacion.html#Arrays">Arrays</a></li>
+                            <li><a href="programacion.html#POO">POO Módulo 1</a></li>
+                            <li><a href="programacion.html#POO2">POO Módulo 2</a></li>
+                            <li><a href="programacion.html#Ficheros">Ficheros</a></li>
+                            <li><a href="programacion.html#BBDD">Bases de Datos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Quien_Soy.html" class="fade-in delay-3">Quién Soy</a></li>
+                    <li><a href="contacto.html" class="fade-in delay-4">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenedor principal del formulario -->
+    <div class="container fade-in delay-2">
+        <h2>Formulario de Contacto</h2>
+        <!-- Formulario con acción para envío por correo -->
+        <form action="mailto:tucorreo@dominio.com" method="post" enctype="text/plain">
+            <!-- Grupo de campos para información personal -->
+            <fieldset>
+                <legend>Información Personal</legend>
+                <div>
+                    <label for="name">Nombre y Apellidos:</label>
+                    <input type="text" id="name" name="name" placeholder="Nombre y apellidos" required>
+                </div>
+                <div>
+                    <label for="number">Número de teléfono:</label>
+                    <input type="tel" id="number" name="number" placeholder="Número de teléfono" required>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Información Adicional</legend>
+                <div>
+                    <label for="Email">Email:</label>
+                    <input type="email" id="Email" name="Email" placeholder="tu.correo@gmail.com" required>
+                </div>
+                <div>
+                    <label for="fecha">Fecha de nacimiento:</label>
+                    <input type="date" id="fecha" name="fecha">
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Mándame tu consulta</legend>
+                <div>
+                    <textarea name="texto" rows="10" cols="50" placeholder="Escríbeme aquí tus dudas, soluciones o problemas."></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <label for="subject">Asunto:</label>
+                <select id="subject" name="subject" required>
+                    <option value="consultas">Consulta general</option>
+                    <option value="trabajo">Trabajo colaborativo</option>
+                    <option value="feedback">Comentarios sobre el portafolio</option>
+                    <option value="otros">Otros</option>
+                </select>
+
+                <label for="urgency">Urgencia:</label><br>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="urgency-low" name="urgency" value="Baja">
+                        <label for="urgency-low">Baja</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="urgency-medium" name="urgency" value="Media" checked>
+                        <label for="urgency-medium">Media</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="urgency-high" name="urgency" value="Alta">
+                        <label for="urgency-high">Alta</label>
+                    </div>
+                </div><br>
+            </fieldset>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </div>
+
+    <!-- Caja de información para conexión en redes sociales -->
+    <div class="info-box fade-in delay-3">
+        <h2>Conéctate conmigo:</h2>
+        <p>Si prefieres otro medio de contacto, también puedes encontrarme en las siguientes redes sociales:</p>
+        <!-- Contenedor de enlaces a redes sociales -->
+        <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+            <!-- Enlace a GitHub con estilo personalizado -->
+            <a href="https://github.com/HugueteRin" target="_blank" class="footer-link github-link">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <!-- Enlace a LinkedIn con estilo personalizado -->
+            <a href="https://www.linkedin.com/in/hugo-rincon-arroyo-245218340/" target="_blank" class="footer-link linkedin-link">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <!-- Enlace a Instagram con estilo personalizado -->
+            <a href="https://www.instagram.com/hugo00000000000/profilecard/?igsh=N25kNGh2bWZ1eWZz" target="_blank" class="footer-link instagram-link">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+        </div>
+    </div>
+
+    <!-- Caja de información adicional -->
+    <div class="info-box fade-in delay-4">
+        <h2>Información adicional:</h2>
+        <p>Si tienes alguna duda o consulta rápida, también puedes escribirme directamente a mi correo electrónico que está al final de la página.</p>
+    </div>
+
+    <!-- Sección de disponibilidad y ubicación -->
+    <div class="section fade-in">
+        <h2>Disponibilidad y Ubicación</h2>
+        <!-- Contenedor flexible para las dos tarjetas -->
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between;">
+            <!-- Tarjeta de ubicación -->
+            <div class="card" style="flex: 1; min-width: 300px;">
+                <h3>Ubicación</h3>
+                <p>
+                    <!-- Icono de ubicación -->
+                    <i class="fas fa-map-marker-alt" style="color: var(--accent-color);"></i>
+                    Puedo trabajar remotamente desde cualquier lugar, pero si prefieres colaborar en persona, me encuentro en Madrid, España.
+                </p>
+            </div>
+
+            <!-- Tarjeta de horarios de contacto -->
+            <div class="card" style="flex: 1; min-width: 300px;">
+                <h3>Horarios de contacto</h3>
+                <p>
+                    <!-- Icono de reloj -->
+                    <i class="far fa-clock" style="color: var(--accent-color);"></i>
+                    Estoy disponible para responder correos y mensajes de lunes a viernes, de 9:00 a 18:00 (hora española).
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Separador horizontal -->
+    <hr>
+    
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <p>Copyright © 2024 - El Portfolio de Hugo Rincón</p>
+            <!-- Enlaces de contacto en el pie de página -->
+            <div class="footer-links">
+                <!-- Enlace para correo electrónico -->
+                <a href="mailto:hugo.rincon.arroyo@gmail.com" class="footer-link">
+                    <img src="correo_icono.webp" width="20" height="20" alt="Correo">
+                    Envíame un correo
+                </a>
+                <!-- Enlace para llamada telefónica -->
+                <a href="tel:+34630352893" class="footer-link">
+                    <img src="icono_telefono.png" width="20" height="20" alt="Teléfono">
+                    Llamar por teléfono
+                </a>
+                <!-- Enlace para descargar CV -->
+                <a href="CVHugoRincón-0.pdf" download="CVHugoRincón-0.pdf" class="footer-link">
+                    <img src="desgarga_icono.png" width="20" height="20" alt="CV">
+                    Descargar mi CV
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
