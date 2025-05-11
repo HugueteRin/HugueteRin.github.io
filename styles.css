@@ -5,7 +5,9 @@
     box-sizing: border-box; /* Incluye padding y borde en el ancho total */
 }
 
-
+p {
+  text-align: justify;
+}
 
 /* Variables de colores y estilos para todo el sitio */
 :root {
